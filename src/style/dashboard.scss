@@ -1,0 +1,16 @@
+
+.compo-1{
+    display: flex;
+    flex: 2;
+
+    .compo-con{
+        flex: 7;
+
+        .compo-con2{
+            padding: 20px;
+        }
+    }
+}
+
+
+  

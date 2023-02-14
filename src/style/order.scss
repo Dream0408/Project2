@@ -1,0 +1,12 @@
+.orderpage {
+    display: flex;
+    flex: 2;
+
+    .orderpage-2 {
+        flex: 7;
+
+        .part-page{
+            padding: 20px;
+        }
+    }
+}

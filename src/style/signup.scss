@@ -1,0 +1,46 @@
+.signup {
+    margin-top: 10px;
+
+    .text.loading{
+      text-align: center;
+      font-size: 14px;
+      font-family: 'Alata', sans-serif;
+    }
+
+    .signupText{
+        font-weight: 100px;
+    }
+  
+    .auth__form {
+      background-color: rgb(220,220,220);
+      border-radius: 5px;
+      padding: 40px;
+      justify-items: center;
+    }
+
+    .auth__form input[type="file"] {
+        cursor: pointer;
+    }
+
+    .name {
+      text-align: center;
+    }
+  
+    .button {
+      border-color: rgb(161, 158, 158);
+      margin: 20px;
+      border-radius: 4px;
+      background-color: rgb(175, 172, 172);
+      color: black;
+    }
+    .text {
+      margin: 10px;
+  
+      .text_two {
+        font-weight: bold;
+        padding-left: 5px;
+        color: #8d8888;
+      }
+    }
+  }
+  

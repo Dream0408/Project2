@@ -1,0 +1,28 @@
+// .user {
+//   margin: 20px;
+//   padding: 20px;
+//   display: flex;
+//   justify-content: center;
+
+//   .table{
+//     padding: 50px;
+//     margin: 50px;
+//     // border: 0.5px solid gray;
+//     // justify-content: space-between;
+//   }
+// }
+
+
+div.img-resize img {
+  width: 55px;
+  height: 65px;
+}
+
+div.img-resize {
+  border: 0.3px solid rgb(218, 209, 209);
+  border-radius: 4px;
+  width: 55px;
+  height: 65px;
+  overflow: hidden;
+  text-align: center;
+}

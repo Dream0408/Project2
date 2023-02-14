@@ -1,0 +1,12 @@
+.inven_side{
+    display: flex;
+      width: 100%;
+    
+      .inven_nav{
+        flex: 7;
+
+        .inven_list {
+          margin: 35px;
+        }
+      }
+    }

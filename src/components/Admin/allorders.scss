@@ -1,0 +1,61 @@
+.table {
+    margin-top: 20px;
+}
+
+.button_action {
+    
+    .button_1 {
+        height: 32px;
+        width: 50px;
+        border-style: none;
+        color: whitesmoke;
+        background-color: #0276FF;
+        margin: 5px 5px 5px 5px;
+        border-color: #D6D6E7;
+        border-radius: 5px;
+    }
+    .button_2 {
+        height: 32px;
+        width: 70px;
+        color: whitesmoke;
+        border-style: none;
+        border-radius: 5px;
+        border-color: #D6D6E7;
+        background-color: #e62143;
+    }
+
+    :hover {
+        background-color: #939699;
+      }
+}
+
+
+.customer {
+    font-size: 15px;
+    text-indent: 15px;
+}
+
+.product {
+    font-size: 15px;
+}
+
+.size {
+    font-size: 15px;
+}
+
+.price {
+    font-size: 15px;
+}
+
+.platform {
+    font-size: 15px;
+}
+
+.quanlity {
+    font-size: 12px;
+    text-indent: 20px;
+}
+
+.date {
+    font-size: 14px;
+}

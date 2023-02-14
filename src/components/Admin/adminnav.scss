@@ -1,0 +1,53 @@
+.adminnav {
+  .wrapper {
+    padding: 15px;
+    display: flex;
+    align-items: center;
+  }
+
+  .search {
+    border-radius: 3px;
+    background-color: rgb(216, 213, 213);
+    padding: 3px;
+    border: 0.5px solid rgb(158, 154, 154);
+    color: rgb(80, 75, 75);
+  }
+
+  .admin__menu {
+    border-radius: 5px;
+    margin-left: 20px;
+    background-color: rgb(203, 223, 236);
+    width: 1150px;
+    height: 70px;
+    line-height: 70px;
+
+    ul {
+      list-style: none;
+    }
+  }
+
+  .admin__navigation {
+    text-align: center;
+  }
+  
+  .admin__menu-list{
+    display: flex;
+    align-items: center;
+    column-gap: 2.7rem;
+    justify-content: center;
+  }
+
+  .admin__menu-list
+  .admin__menu-item a {
+    text-decoration: none;
+    color: gray;
+    font-weight: bold;
+    // background-color: whitesmoke;
+    padding: 8px 12px;
+    border-radius: 5px;
+  }
+
+  .active__admin-menu{
+    background-color: whitesmoke;
+  }
+}

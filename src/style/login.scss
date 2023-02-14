@@ -1,0 +1,37 @@
+.login {
+  font-weight: 100px;
+  margin-top: 100px;
+
+  .text.loading{
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Alata', sans-serif;
+  }
+
+  .auth__form {
+    background-color: rgb(220,220,220);
+    border-radius: 5px;
+    padding: 40px;
+    justify-items: center;
+  }
+  .name {
+    text-align: center;
+  }
+
+  .button {
+    border-color: rgb(161, 158, 158);
+    margin: 10px;
+    border-radius: 4px;
+    background-color: rgb(175, 172, 172);
+    color: black;
+  }
+  .text {
+    margin: 15px;
+
+    .text_two {
+      font-weight: bold;
+      padding-left: 5px;
+      color: #8d8888;
+    }
+  }
+}
