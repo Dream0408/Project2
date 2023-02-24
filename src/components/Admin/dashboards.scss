@@ -1,0 +1,35 @@
+.lg-3 {
+    padding: 30px;
+}
+
+.reveneu__box, .orders__box, .shippings__box, .users__box {
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.reveneu__box{
+    background-color:rgb(245, 213, 219);
+}
+
+.orders__box{
+    background-color: rgb(182, 235, 182);
+}
+
+.shippings__box {
+    background-color: rgb(224,255,255)
+}
+
+.users__box {
+    background-color: rgb(255,228,181)
+}
+
+.text_name {
+    font-size: 18px;
+    font-weight: 500px;
+    margin-bottom: 20px;
+}
+
+.text_num {
+    font-weight: bold;
+    font-size: 18px;
+}

@@ -57,30 +57,6 @@ const ShippingAdd = () => {
                 />
               </FormGroup>
               <FormGroup>
-                <span className="name">Tracking</span>
-                <Input
-                  type="text"
-                  placeholder="VRIC47962865B0"
-                  value={enterTracking}
-                  onChange={(e) => setEnterTracking(e.target.value)}
-                  required
-                />
-              </FormGroup>
-              <FormGroup>
-                <span className="name">Company</span>
-                <Input
-                  type="select"
-                  value={enterCompany}
-                  onChange={(e) => setEnterCompany(e.target.value)}
-                  required
-                >
-                  <option value="Kerry">Kerry</option>
-                  <option value="J&T">J&T</option>
-                  <option value="Flash">Flash</option>
-                  <option value="Thai post">THAI Post</option>
-                </Input>
-              </FormGroup>
-              <FormGroup>
                 <span className="name">Product Name</span>
                 <Input
                   type="text"
@@ -118,6 +94,30 @@ const ShippingAdd = () => {
                   onChange={(e) => setEnterDate(e.target.value)}
                   required
                 />
+              </FormGroup>
+              <FormGroup>
+                <span className="name">Tracking</span>
+                <Input
+                  type="text"
+                  placeholder="VRIC47962865B0"
+                  value={enterTracking}
+                  onChange={(e) => setEnterTracking(e.target.value)}
+                  required
+                />
+              </FormGroup>
+              <FormGroup>
+                <span className="name">Company</span>
+                <Input
+                  type="select"
+                  value={enterCompany}
+                  onChange={(e) => setEnterCompany(e.target.value)}
+                  required
+                >
+                  <option value="Kerry">Kerry</option>
+                  <option value="J&T">J&T</option>
+                  <option value="Flash">Flash</option>
+                  <option value="Thai post">THAI Post</option>
+                </Input>
               </FormGroup>
               <FormGroup>
                 <span className="name">Status</span>

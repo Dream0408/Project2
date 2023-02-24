@@ -4,7 +4,10 @@ import Sidebar from '../components/sidebar/Sidebar';
 import Widget from '../components/widget/Widget';
 import '../style/home.scss';
 
+
 const Home = () => {
+
+
   return (
     <div className='home'>
         <Sidebar/>
@@ -15,6 +18,9 @@ const Home = () => {
           <Widget type="order"/>
           <Widget type="shipping"/>
         </div>
+        {/* <div>
+          <Widget/>
+        </div> */}
       </div>
     </div>
   )

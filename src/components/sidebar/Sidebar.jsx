@@ -16,11 +16,11 @@ import { Link } from "react-router-dom";
 const Sidebar = () => {
   return (
     <div className="sidebar">
-      <div className="top">
-      {/* <Link to="/" style={{ textDecoration: "none" }}> */}
+      <div className="top">      
+      <Link to="/" style={{ textDecoration: "none" }}>
           <span className="logo">Isi style Admin</span>
-      {/* </Link> */}
-      </div>
+      </Link>
+    </div>
       <hr />
       <div className="center">
         <ul>

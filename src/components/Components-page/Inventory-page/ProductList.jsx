@@ -31,6 +31,7 @@ import TextField from "@mui/material/TextField";
 import Autocomplete from "@mui/material/Autocomplete";
 import { getStorage, ref } from "firebase/storage";
 
+
 export default function ProductList() {
   const [page, setPage] = useState(0);
   const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -57,6 +58,38 @@ export default function ProductList() {
     setPage(0);
   };
 
+  const deleteUser = (id) => {
+    Swal.fire({
+      title: "Are you sure?",
+      text: "You won't be able to revert this!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Yes, delete it!",
+    }).then((result) => {
+      if (result.value) {
+        deleteApi(id);
+      }
+    });
+  };
+
+  const deleteApi = async (id) => {
+    const userDoc = doc(db, "products", id);
+    await deleteDoc(userDoc);
+    Swal.fire("Deleted!", "Your file has been deleted.", "success");
+    getUsers();
+  };
+
+  const filterData = (v) => {
+    if (v) {
+      setRows([v]);
+    } else {
+      setRows([]);
+      getUsers();
+    }
+  };
+
   return (
     <Paper sx={{ width: "100%", overflow: "hidden" }}>
       <Typography
@@ -70,11 +103,35 @@ export default function ProductList() {
       </Typography>
       <Divider />
 
+      <Box height={10} />
+          <Stack direction="row" spacing={2} className="my-2 mb-2">
+            <Autocomplete
+              disablePortal
+              id="combo-box-demo"
+              options={rows}
+              sx={{ width: 300 }}
+              onChange={(e, v) => filterData(v)}
+              getOptionLabel={(rows) => rows.Product || ""}
+              renderInput={(params) => (
+                <TextField {...params} size="small" label="Search Products" />
+              )}
+            />
+            <Typography 
+              variant="h6"
+              component="div"
+              sx={{ flexGrow: 1 }}
+            ></Typography>
+            <Button  className="button_add" variant="contained" endIcon={<AddCircleIcon />}>
+              Add
+            </Button>
+          </Stack>
+          <Box height={10} />
+
       <TableContainer sx={{ maxHeight: 440 }}>
-        <Table stickyHeader aria-label="sticky table">
+        <Table stickyHeader aria-label="sticky table"  fontFamily={"Nunito"}>
           <TableHead>
             <TableRow>
-              <TableCell align="left" style={{ minWidth: "100px" }}>
+              <TableCell align="left" style={{ minWidth: "100px" }} >
                 Image
               </TableCell>
 
@@ -98,12 +155,15 @@ export default function ProductList() {
                 Date
               </TableCell>
 
-              <TableCell align="left" style={{ minWidth: "100px" }}>
+              <TableCell  align="left" style={{ minWidth: "100px" }}>
                 Stock status
               </TableCell>
 
               <TableCell align="left" style={{ minWidth: "100px" }}>
                 Stock
+              </TableCell>
+              <TableCell align="left" style={{ minWidth: "100px" }}>
+                Action
               </TableCell>
             </TableRow>
           </TableHead>
@@ -138,6 +198,29 @@ export default function ProductList() {
                     <TableCell key={row.id} align="left">
                       {row.Stock}
                     </TableCell>
+                    <TableCell align="left">
+                          <Stack spacing={2} direction="row">
+                            <EditIcon
+                              style={{
+                                fontSize: "20px",
+                                color: "blue",
+                                cursor: "pointer",
+                              }}
+                              className="cursor-pointer"
+                              // onClick={() => editUser(row.id)}
+                            />
+                            <DeleteIcon
+                              style={{
+                                fontSize: "20px",
+                                color: "darkred",
+                                cursor: "pointer",
+                              }}
+                              onClick={() => {
+                                deleteUser(row.id);
+                              }}
+                            />
+                          </Stack>
+                        </TableCell>
                   </TableRow>
                 );
               })}
